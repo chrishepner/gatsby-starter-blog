@@ -1,13 +1,13 @@
-import React from 'react'
+import * as React from 'react'
 import Helmet from 'react-helmet'
 import { Link,graphql } from 'gatsby'
-import get from 'lodash/get'
+import { get } from 'lodash'
 
 import Bio from '../components/Bio'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
-class BlogPostTemplate extends React.Component {
+class BlogPostTemplate extends React.Component<any, any> {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')

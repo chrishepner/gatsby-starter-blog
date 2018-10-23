@@ -1,12 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
 
-class Template extends React.Component {
+class Template extends React.Component<any, any> {
   render() {
     const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
+    const rootPath = `/`
     let header
 
     if (location.pathname === rootPath) {
@@ -21,8 +21,8 @@ class Template extends React.Component {
           <Link
             style={{
               boxShadow: 'none',
-              textDecoration: 'none',
               color: 'inherit',
+              textDecoration: 'none',
             }}
             to={'/'}
           >
@@ -35,15 +35,15 @@ class Template extends React.Component {
         <h3
           style={{
             fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
             marginBottom: rhythm(-1),
+            marginTop: 0,
           }}
         >
           <Link
             style={{
               boxShadow: 'none',
-              textDecoration: 'none',
               color: 'inherit',
+              textDecoration: 'none',
             }}
             to={'/'}
           >
